@@ -15,7 +15,7 @@ def test_imports():
     print("Testing imports...")
     
     try:
-        from scripts.alcohol_data_integrity import (
+        from scripting.scripts.alcohol_data_integrity_deprecated import (
             LCBOStatsClient, 
             DataIntegrityProcessor,
             CONFIG
@@ -31,7 +31,7 @@ def test_credentials():
     print("\nTesting Google credentials...")
     
     try:
-        from scripts.alcohol_data_integrity import DataIntegrityProcessor
+        from scripting.scripts.alcohol_data_integrity_deprecated import DataIntegrityProcessor
         processor = DataIntegrityProcessor()
         print("✓ Google credentials loaded successfully")
         return True
@@ -44,7 +44,7 @@ def test_lcbo_api():
     print("\nTesting LCBO API...")
     
     try:
-        from scripts.alcohol_data_integrity import LCBOStatsClient
+        from scripting.scripts.alcohol_data_integrity_deprecated import LCBOStatsClient
         client = LCBOStatsClient()
         
         # Try to fetch a small amount of data
@@ -66,7 +66,7 @@ def test_google_sheets():
     print("\nTesting Google Sheets access...")
     
     try:
-        from scripts.alcohol_data_integrity import DataIntegrityProcessor, CONFIG
+        from scripting.scripts.alcohol_data_integrity_deprecated import DataIntegrityProcessor, CONFIG
         processor = DataIntegrityProcessor()
         
         # Try to get sheet metadata
